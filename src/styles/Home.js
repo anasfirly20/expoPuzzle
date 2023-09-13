@@ -18,4 +18,25 @@ export const homeStyle = StyleSheet.create({
     bottom: 0,
     right: 60,
   },
+  timerContainer: {
+    flexDirection: "row",
+    alignSelf: "center",
+    marginTop: 30,
+    gap: 6,
+  },
+  timer: {
+    paddingHorizontal: 20,
+    paddingVertical: 30,
+    borderRadius: 100,
+  },
+  timerNumber: {
+    fontSize: 50,
+    fontWeight: "600",
+  },
+  divider: {
+    fontSize: 50,
+    fontWeight: "600",
+    alignSelf: "center",
+    paddingHorizontal: 5,
+  },
 });

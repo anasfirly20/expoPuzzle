@@ -5,10 +5,14 @@ import { View, Text } from "react-native";
 import { homeStyle } from "../styles/Home.js";
 import { loginStyle } from "../styles/Login.js";
 
+// Components
+import Timer from "../components/Timer.jsx";
+import TextQsMark from "../components/TextQsMark.jsx";
+
 // Miscellaneous
 import { SvgXml } from "react-native-svg";
 import { brandLogo } from "../assets/icons/Brand";
-import { qsMark, rectangle } from "../assets/icons/Others";
+import { rectangle } from "../assets/icons/Others";
 
 export default function HomeScreen() {
   return (
@@ -22,12 +26,15 @@ export default function HomeScreen() {
           xml={brandLogo(160, 160, "white")}
           style={loginStyle.logoContainer}
         />
-        <View style={{ position: "relative" }}>
-          <Text style={[loginStyle.loginText, { color: "white" }]}>
-            До начала розыгрыша
-          </Text>
-          <SvgXml xml={qsMark(20, 20, "white")} style={homeStyle.qsMark} />
+        <TextQsMark text="До начала розыгрыша" />
+        <View style={homeStyle.timerContainer}>
+          <Timer number={0} backgroundColor="white" color="black" />
+          <Timer number={0} backgroundColor="white" color="black" />
+          <Text style={homeStyle.divider}>:</Text>
+          <Timer number={3} backgroundColor="#FF00B8" color="white" />
+          <Timer number={5} backgroundColor="#FF00B8" color="white" />
         </View>
+        <TextQsMark text="Разыгрываем сегодня" />
       </View>
     </SafeAreaView>
   );
