@@ -18,8 +18,15 @@ import { brandLogo } from "../assets/icons/Brand";
 import { loginStyle } from "../styles/Login";
 
 // Components
-import { viewOff, showPass, hidePass } from "../assets/icons/Others";
+import {
+  viewOff,
+  showPass,
+  hidePass,
+  vk,
+  yandex,
+} from "../assets/icons/Others";
 import CustomButton from "../components/CustomButton";
+import ButtonSocmed from "../components/ButtonSocmed";
 
 export default function LoginScreen() {
   const [showPassword, setShowPassword] = useState(true);
@@ -35,12 +42,18 @@ export default function LoginScreen() {
             <TextInput
               style={loginStyle.inputLogin}
               placeholder="Логин или телефон"
+              onChangeText={(e) => {
+                console.log(e);
+              }}
             />
             <View style={loginStyle.inputPasswordContainer}>
               <TextInput
                 style={loginStyle.inputPassword}
                 placeholder="Пароль"
                 secureTextEntry={showPassword ? true : false}
+                onChangeText={(e) => {
+                  console.log(e);
+                }}
               />
               <Pressable
                 style={loginStyle.iconHidePassword}
@@ -52,20 +65,22 @@ export default function LoginScreen() {
               </Pressable>
             </View>
           </View>
-          <View style={{ marginTop: 20 }}>
+          <View style={{ marginTop: 25 }}>
             <CustomButton backgroundColor="#FF00B8" label="Войти" />
           </View>
           <TouchableOpacity style={loginStyle.forgotPassContainer}>
             <Text style={loginStyle.forgotPassText}>Не помню пароль</Text>
           </TouchableOpacity>
           <View style={loginStyle.socialMediaButtonContainer}>
-            <CustomButton
+            <ButtonSocmed
               label="Войти через Вконтакте"
               backgroundColor="#0077FF"
+              xml={vk(25, 25)}
             />
-            <CustomButton
+            <ButtonSocmed
               label="Войти через Яндекс"
               backgroundColor="#FB3F1C"
+              xml={yandex(23, 23)}
             />
           </View>
           <TouchableOpacity style={loginStyle.forgotPassContainer}>

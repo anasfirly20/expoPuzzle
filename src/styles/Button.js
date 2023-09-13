@@ -14,4 +14,15 @@ export const buttonStyle = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
+  buttonSocmedContainer: {
+    borderRadius: 20,
+    alignSelf: "center",
+    padding: 14,
+    width: "90%",
+    marginHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+  },
 });
