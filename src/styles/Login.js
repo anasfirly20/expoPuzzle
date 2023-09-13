@@ -9,7 +9,6 @@ export const loginStyle = StyleSheet.create({
   },
   logoContainer: {
     alignSelf: "center",
-    marginTop: 20,
   },
   loginText: {
     textAlign: "center",
@@ -61,5 +60,11 @@ export const loginStyle = StyleSheet.create({
   },
   regisText: {
     fontSize: 16,
+  },
+  cardsContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 20,
+    marginTop: 20,
   },
 });

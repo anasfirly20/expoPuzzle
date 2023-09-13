@@ -10,7 +10,7 @@ import { homeStyle } from "../styles/Home";
 
 export default function TextQsMark({ text }) {
   return (
-    <View style={{ position: "relative", marginVertical: 15 }}>
+    <View style={{ position: "relative", marginVertical: 10 }}>
       <Text style={[loginStyle.loginText, { color: "white" }]}>{text}</Text>
       <SvgXml xml={qsMark(20, 20, "white")} style={homeStyle.qsMark} />
     </View>

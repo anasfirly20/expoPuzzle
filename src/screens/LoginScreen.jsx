@@ -30,7 +30,10 @@ export default function LoginScreen({ navigation }) {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View>
           <Text style={loginStyle.headerText}>Авторизация</Text>
-          <SvgXml xml={brandLogo(120, 120)} style={loginStyle.logoContainer} />
+          <SvgXml
+            xml={brandLogo(120, 120)}
+            style={[loginStyle.logoContainer, { marginTop: 20 }]}
+          />
           <Text style={loginStyle.loginText}>Войти</Text>
           <View style={loginStyle.inputContainer}>
             <TextInput
