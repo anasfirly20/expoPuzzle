@@ -4,7 +4,7 @@ export const buttonStyle = StyleSheet.create({
   container: {
     borderRadius: 20,
     alignSelf: "center",
-    padding: 16,
+    padding: 14,
     width: "90%",
     marginHorizontal: 20,
   },

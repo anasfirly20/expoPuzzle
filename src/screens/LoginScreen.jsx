@@ -1,4 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Fragment, useState } from "react";
 import {
   View,
   Text,
@@ -6,6 +7,7 @@ import {
   TouchableWithoutFeedback,
   TextInput,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 
 // Miscellaneous
@@ -16,10 +18,12 @@ import { brandLogo } from "../assets/icons/Brand";
 import { loginStyle } from "../styles/Login";
 
 // Components
-import { viewOff } from "../assets/icons/Others";
+import { viewOff, showPass, hidePass } from "../assets/icons/Others";
 import CustomButton from "../components/CustomButton";
 
 export default function LoginScreen() {
+  const [showPassword, setShowPassword] = useState(true);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#ffffff" }}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -36,11 +40,16 @@ export default function LoginScreen() {
               <TextInput
                 style={loginStyle.inputPassword}
                 placeholder="Пароль"
+                secureTextEntry={showPassword ? true : false}
               />
-              <SvgXml
-                xml={viewOff(35, 35)}
+              <Pressable
                 style={loginStyle.iconHidePassword}
-              />
+                onPress={() => setShowPassword(!showPassword)}
+              >
+                <SvgXml
+                  xml={showPassword ? showPass(30, 30) : hidePass(30, 30)}
+                />
+              </Pressable>
             </View>
           </View>
           <View style={{ marginTop: 20 }}>

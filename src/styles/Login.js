@@ -44,7 +44,7 @@ export const loginStyle = StyleSheet.create({
     position: "absolute",
     right: 15,
     zIndex: 1,
-    top: "50%",
+    top: "55%",
   },
   forgotPassContainer: {
     alignSelf: "center",
@@ -56,7 +56,7 @@ export const loginStyle = StyleSheet.create({
     fontWeight: "500",
   },
   socialMediaButtonContainer: {
-    marginTop: 90,
+    marginTop: 100,
     gap: 10,
   },
   regisText: {
