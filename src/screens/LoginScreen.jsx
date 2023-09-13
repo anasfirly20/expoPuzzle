@@ -18,17 +18,11 @@ import { brandLogo } from "../assets/icons/Brand";
 import { loginStyle } from "../styles/Login";
 
 // Components
-import {
-  viewOff,
-  showPass,
-  hidePass,
-  vk,
-  yandex,
-} from "../assets/icons/Others";
+import { showPass, hidePass, vk, yandex } from "../assets/icons/Others";
 import CustomButton from "../components/CustomButton";
 import ButtonSocmed from "../components/ButtonSocmed";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [showPassword, setShowPassword] = useState(true);
 
   return (
@@ -60,13 +54,19 @@ export default function LoginScreen() {
                 onPress={() => setShowPassword(!showPassword)}
               >
                 <SvgXml
-                  xml={showPassword ? showPass(30, 30) : hidePass(30, 30)}
+                  xml={showPassword ? hidePass(30, 30) : showPass(30, 30)}
                 />
               </Pressable>
             </View>
           </View>
           <View style={{ marginTop: 25 }}>
-            <CustomButton backgroundColor="#FF00B8" label="Войти" />
+            <CustomButton
+              backgroundColor="#FF00B8"
+              label="Войти"
+              onPress={() => {
+                navigation.navigate("Home");
+              }}
+            />
           </View>
           <TouchableOpacity style={loginStyle.forgotPassContainer}>
             <Text style={loginStyle.forgotPassText}>Не помню пароль</Text>
