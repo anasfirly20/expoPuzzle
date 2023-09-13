@@ -5,6 +5,7 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 
 // Miscellaneous
@@ -15,8 +16,8 @@ import { brandLogo } from "../assets/icons/Brand";
 import { loginStyle } from "../styles/Login";
 
 // Components
-import CustomInput from "../components/CustomInput";
 import { viewOff } from "../assets/icons/Others";
+import CustomButton from "../components/CustomButton";
 
 export default function LoginScreen() {
   return (
@@ -42,6 +43,12 @@ export default function LoginScreen() {
               />
             </View>
           </View>
+          <View style={{ marginTop: 20 }}>
+            <CustomButton label="Войти" />
+          </View>
+          <TouchableOpacity style={loginStyle.forgotPassContainer}>
+            <Text style={loginStyle.forgotPassText}>Не помню пароль</Text>
+          </TouchableOpacity>
         </View>
       </TouchableWithoutFeedback>
     </SafeAreaView>

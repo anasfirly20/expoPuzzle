@@ -46,4 +46,13 @@ export const loginStyle = StyleSheet.create({
     zIndex: 1,
     top: "50%",
   },
+  forgotPassContainer: {
+    alignSelf: "center",
+    marginTop: 20,
+  },
+  forgotPassText: {
+    color: "#9B8B97",
+    fontSize: 17,
+    fontWeight: "500",
+  },
 });
