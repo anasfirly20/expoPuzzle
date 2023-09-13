@@ -8,8 +8,14 @@ export const homeStyle = StyleSheet.create({
     marginTop: 15,
     color: "white",
   },
-  logoContainer: {
-    alignSelf: "center",
-    marginTop: 20,
+  rectangle: {
+    position: "absolute",
+    right: 0,
+    top: 0,
+  },
+  qsMark: {
+    position: "absolute",
+    bottom: 0,
+    right: 60,
   },
 });

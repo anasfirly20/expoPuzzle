@@ -19,3 +19,20 @@ export const hidePass = (w = 100, h = 100) => {
 export const showPass = (w = 100, h = 100) => {
   return `<svg xmlns="http://www.w3.org/2000/svg" width=${w} height=${h} viewBox="0 0 24 24"><path fill="black" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0Z"/></svg>`;
 };
+
+export const rectangle = (w = 100, h = 100) => {
+  return `<svg width=${w} height=${h} viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M427.69 -15.3438L605.567 128.455L400.5 715.5L580.568 857.455L-46.4999 778.5L427.69 -15.3438Z" fill="#9E00FF"/>
+  </svg>
+  `;
+};
+
+export const qsMark = (w = 100, h = 100) => {
+  return `<svg width=${w} height=${h} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
+  <circle cx="12" cy="18" r="0.5" fill="white" stroke="white"/>
+  <path d="M12 16V14.5811C12 13.6369 12.6042 12.7986 13.5 12.5V12.5C14.3958 12.2014 15 11.3631 15 10.4189V9.90569C15 8.30092 13.6991 7 12.0943 7H12C10.3431 7 9 8.34315 9 10V10" stroke="white" stroke-width="2"/>
+  </svg>
+  
+  `;
+};
