@@ -10,7 +10,7 @@ export const buttonStyle = StyleSheet.create({
   },
   label: {
     color: "white",
-    fontWeight: "600",
+    fontWeight: "500",
     fontSize: 18,
     textAlign: "center",
   },

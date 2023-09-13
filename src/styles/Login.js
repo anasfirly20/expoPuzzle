@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const loginStyle = StyleSheet.create({
   headerText: {
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "500",
     marginTop: 15,
   },
@@ -13,7 +13,7 @@ export const loginStyle = StyleSheet.create({
   },
   loginText: {
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "500",
     marginTop: 25,
   },
@@ -52,7 +52,14 @@ export const loginStyle = StyleSheet.create({
   },
   forgotPassText: {
     color: "#9B8B97",
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: "500",
+  },
+  socialMediaButtonContainer: {
+    marginTop: 90,
+    gap: 10,
+  },
+  regisText: {
+    fontSize: 16,
   },
 });

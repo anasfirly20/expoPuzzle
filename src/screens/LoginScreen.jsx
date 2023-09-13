@@ -44,10 +44,23 @@ export default function LoginScreen() {
             </View>
           </View>
           <View style={{ marginTop: 20 }}>
-            <CustomButton label="Войти" />
+            <CustomButton backgroundColor="#FF00B8" label="Войти" />
           </View>
           <TouchableOpacity style={loginStyle.forgotPassContainer}>
             <Text style={loginStyle.forgotPassText}>Не помню пароль</Text>
+          </TouchableOpacity>
+          <View style={loginStyle.socialMediaButtonContainer}>
+            <CustomButton
+              label="Войти через Вконтакте"
+              backgroundColor="#0077FF"
+            />
+            <CustomButton
+              label="Войти через Яндекс"
+              backgroundColor="#FB3F1C"
+            />
+          </View>
+          <TouchableOpacity style={loginStyle.forgotPassContainer}>
+            <Text style={loginStyle.regisText}>Регистрация</Text>
           </TouchableOpacity>
         </View>
       </TouchableWithoutFeedback>
